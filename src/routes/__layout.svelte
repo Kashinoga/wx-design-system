@@ -1,51 +1,42 @@
 <script lang="ts">
-	import TopNav from '$lib/nav/top-nav.svelte';
+	import Header from '$lib/header/header.svelte';
 	import '../app.css';
 </script>
 
-<TopNav />
+<Header />
 
-<container>
-	<main>
-		<slot />
-	</main>
-</container>
+<div class="content">
+	<slot />
+</div>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<div class="footer-item">
+		<p>
+			<a href="https://kashinoga.com/">Kashinoga</a>
+		</p>
+	</div>
 </footer>
 
 <style>
-	container {
-		border-top: 1px solid var(--color-yellow);
-	}
-
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
+	.content {
+		/* height: calc(100% - ) */
 		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
 	}
 
 	footer {
+		background-color: var(--color-one);
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
 	}
 
-	footer a {
-		font-weight: bold;
+	.footer-item {
+		margin: auto;
 	}
 
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
+	.footer-item p a {
+		color: var(--color-white);
+	}
+
+	.footer-item p a:hover {
+		color: var(--color-yellow);
 	}
 </style>

@@ -1,14 +1,14 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import logo from './svelte-logo.svg';
+	import logo from '/static/icons8-wind-16.png';
 </script>
 
 <header>
-	<!-- <div class="corner">
-		<a href="https://kit.svelte.dev">
-			<img src={logo} alt="SvelteKit" />
+	<div class="corner">
+		<a href="/">
+			<img src={logo} alt="WX" />
 		</a>
-	</div> -->
+	</div>
 
 	<nav>
 		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
@@ -16,27 +16,32 @@
 		</svg> -->
 		<ul>
 			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">WX</a></li>
-			<li class:active={$page.path === '/welcome'}><a sveltekit:prefetch href="/welcome">Welcome</a></li>
+			<li class:active={$page.path === '/welcome'}>
+				<a sveltekit:prefetch href="/welcome">Welcome</a>
+			</li>
 			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
 		</ul>
-		<svg viewBox="0 0 2 3" aria-hidden="true">
+		<!-- <svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
-		</svg>
+		</svg> -->
 	</nav>
 
-	<div class="corner">
-		<!-- TODO put something else here? github link? -->
-	</div>
+	<!-- <div class="corner">
+		
+	</div> -->
 </header>
 
 <style>
 	header {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: row;
+		/* justify-content: space-between; */
 	}
 
 	.corner {
+		background: var(--color-yellow);
+		flex: none;
 		width: 3em;
 		height: 3em;
 	}
@@ -50,15 +55,16 @@
 	}
 
 	.corner img {
-		width: 2em;
-		height: 2em;
-		object-fit: contain;
+		height: auto;
+		object-fit: fit;
+		width: auto;
 	}
 
 	nav {
 		display: flex;
-		justify-content: center;
-		--background: rgba(255, 255, 255, 0.7);
+		flex: auto;
+		/* justify-content: center; */
+		background: var(--color-bg);
 	}
 
 	svg {
@@ -85,20 +91,21 @@
 	}
 
 	li {
+		flex: auto;
 		position: relative;
 		height: 100%;
 	}
 
 	li.active::before {
-		--size: 6px;
+		--size: 8px;
 		content: '';
 		width: 0;
 		height: 0;
 		position: absolute;
-		top: 0;
+		bottom: 0;
 		left: calc(50% - var(--size));
 		border: var(--size) solid transparent;
-		border-top: var(--size) solid var(--accent-color);
+		border-bottom: var(--size) solid var(--color-yellow);
 	}
 
 	nav a {
@@ -106,16 +113,20 @@
 		height: 100%;
 		align-items: center;
 		padding: 0 1em;
-		color: var(--heading-color);
-		font-weight: 700;
-		font-size: 0.8rem;
-		text-transform: uppercase;
-		letter-spacing: 0.1em;
+		color: var(--color-white);
+		/* font-weight: 600; */
+		/* font-size: 0.8rem; */
+		/* text-transform: uppercase; */
+		/* letter-spacing: 0.01em; */
 		text-decoration: none;
-		transition: color 0.2s linear;
+		/* transition: color 0.2s linear; */
 	}
 
 	a:hover {
-		color: var(--accent-color);
+		color: var(--color-yellow);
+	}
+
+	li a:active:hover {
+		color: var(--color-white);
 	}
 </style>

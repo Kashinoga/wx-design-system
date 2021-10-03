@@ -1,19 +1,25 @@
 <script lang="ts">
-	import Header from '$lib/header/Header.svelte';
+	import TopNav from '$lib/nav/top-nav.svelte';
 	import '../app.css';
 </script>
 
-<Header />
+<TopNav />
 
-<main>
-	<slot />
-</main>
+<container>
+	<main>
+		<slot />
+	</main>
+</container>
 
 <footer>
 	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
 </footer>
 
 <style>
+	container {
+		border-top: 1px solid var(--color-yellow);
+	}
+
 	main {
 		flex: 1;
 		display: flex;

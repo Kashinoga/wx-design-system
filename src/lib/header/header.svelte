@@ -8,12 +8,13 @@
 		<input type="checkbox" id="hamburger"/>
 
 		<ul id="hamburger-ingredients">
-			<li class="badge" class:active={$page.path === '/'}><a sveltekit:prefetch href="/">WX</a></li>
 			<li class:active={$page.path === '/welcome'}>
 				<a sveltekit:prefetch href="/welcome">Welcome</a>
 			</li>
-			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
+			<li class:active={$page.path === '/mythic'}><a sveltekit:prefetch href="/mythic">Mythic</a></li>
 			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
+			<li class:active={$page.path === '/'}><a sveltekit:prefetch href="/">WX</a></li>
+			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 		</ul>
 	</nav>
 </header>
@@ -49,6 +50,10 @@
 		color: var(--color-black);
 	}
 
+	nav ul li.active {
+		background-color: var(--color-green);
+	}
+
 	nav ul li a {
 		align-items: center;
 		color: var(--color-white);
@@ -63,6 +68,10 @@
 		color: var(--color-black);
 	}
 
+	nav ul li.active a {
+		color: var(--color-black);
+	}
+
 	@media only screen and (max-width: 425px) {
 		nav {
 			flex-direction: column;
@@ -71,9 +80,10 @@
 
 		nav label { 
 			align-items: center;
-			display: flex; 
-			color: var(--color-black);
 			background: var(--color-yellow);
+			color: var(--color-black);
+			display: flex;
+			font-size: 1.5em; 
 			height: 70px;
 			justify-content: center;
 			padding: 0;

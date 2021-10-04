@@ -5,9 +5,11 @@
 
 <Header />
 
-<article>
-	<slot />
-</article>
+<main>
+	<article>
+		<slot />
+	</article>
+</main>
 
 <footer>
 	<div class="footer-item">
@@ -16,7 +18,7 @@
 </footer>
 
 <style>
-	article {
+	main {
 		padding: 1rem;
 	}
 

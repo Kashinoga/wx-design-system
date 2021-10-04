@@ -30,3 +30,29 @@ ul {
 	margin: 0;
 	padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	margin: 0;
+	margin-bottom: 0.5em;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.8em;
+}
+
+h3 {
+	font-size: 1.6em;
+}
+
+p {
+	margin: 0;
+	margin-bottom: 1em;
+}

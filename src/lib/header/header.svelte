@@ -21,25 +21,6 @@
 <style>
 	nav label, #hamburger { display: none; }
 
-	@media screen and (max-width: 768px){
-		nav {
-			flex-direction: column;
-		}
-
-		nav label { 
-			align-items: center;
-			display: flex; 
-			color: var(--color-black);
-			background: var(--color-green);
-			height: 70px;
-			justify-content: center;
-			padding: 0;
-		}
-
-		#hamburger-ingredients { display: none; }
-		nav input:checked ~ #hamburger-ingredients { display: block; }
-	}
-
 	nav {
 		background-color: var(--color-one);
 		display: flex;
@@ -84,7 +65,25 @@
 
 	@media only screen and (max-width: 425px) {
 		nav {
+			flex-direction: column;
 			height: unset;
+		}
+
+		nav label { 
+			align-items: center;
+			display: flex; 
+			color: var(--color-black);
+			background: var(--color-yellow);
+			height: 70px;
+			justify-content: center;
+			padding: 0;
+		}
+
+		#hamburger-ingredients { display: none; }
+		nav input:checked ~ #hamburger-ingredients { display: block; }
+
+		.badge {
+			background: var(--color-green);
 		}
 
 		nav ul {

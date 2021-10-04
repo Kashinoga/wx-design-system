@@ -11,9 +11,7 @@
 
 <footer>
 	<div class="footer-item">
-		<p>
-			<a href="https://kashinoga.com/">Kashinoga</a>
-		</p>
+		<a href="https://kashinoga.com/">Kashinoga</a>
 	</div>
 </footer>
 
@@ -26,18 +24,18 @@
 		background-color: var(--color-one);
 		display: flex;
 		margin-top: auto;
-		min-height: 70px;
+		min-height: 50px;
 	}
 
 	.footer-item {
 		margin: auto;
 	}
 
-	.footer-item p a {
+	.footer-item a {
 		color: var(--color-white);
 	}
 
-	.footer-item p a:hover {
+	.footer-item a:hover {
 		color: var(--color-yellow);
 	}
 </style>

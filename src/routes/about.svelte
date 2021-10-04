@@ -15,13 +15,19 @@
 </script>
 
 <svelte:head>
-	<title>About</title>
+	<title>About | WX Design System</title>
 </svelte:head>
 
 <div class="content">
-	<h1>About WX</h1>
+	<h1>WX Design System</h1>
 
-	<h2>Data Source</h2>
+	<h2>Weather Alerts</h2>
+
+	<p>WX is a weather alerts app built on the National Weather Service API and is used here to showcase the WX Design System.</p>
+
+	<h2>Design System</h2>
+
+	<p>WX Design System is currently a hobby project for me to learn web technologies and to build a design language for my other hobby projects.</p>
 </div>
 
 <style>

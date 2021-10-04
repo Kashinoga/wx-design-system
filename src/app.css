@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
 	--color-black: rgb(0, 0, 0);
 	--color-white: rgb(255, 255, 255);
@@ -11,8 +13,6 @@
 	--color-purple: rgb(127, 80, 255);
 	--color-yellow: rgb(255, 215, 80);
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
 	display: flex;

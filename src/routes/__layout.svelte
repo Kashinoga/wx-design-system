@@ -5,9 +5,9 @@
 
 <Header />
 
-<div class="content">
+<article>
 	<slot />
-</div>
+</article>
 
 <footer>
 	<div class="footer-item">
@@ -18,14 +18,15 @@
 </footer>
 
 <style>
-	.content {
-		/* height: calc(100% - ) */
+	article {
 		padding: 1rem;
 	}
 
 	footer {
 		background-color: var(--color-one);
 		display: flex;
+		margin-top: auto;
+		min-height: 70px;
 	}
 
 	.footer-item {

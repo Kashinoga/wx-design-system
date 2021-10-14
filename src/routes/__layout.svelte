@@ -25,8 +25,9 @@
 	footer {
 		background-color: var(--color-one);
 		display: flex;
+		font-size: 0.7em;
 		margin-top: auto;
-		min-height: 50px;
+		min-height: var(--height-footer);
 	}
 
 	.footer-item {

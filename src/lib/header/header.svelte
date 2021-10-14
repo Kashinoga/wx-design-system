@@ -8,8 +8,8 @@
 		<input type="checkbox" id="hamburger"/>
 
 		<ul id="hamburger-ingredients">
-			<li class:active={$page.path === '/welcome'}>
-				<a sveltekit:prefetch href="/welcome">Welcome</a>
+			<li class:active={$page.path === '/design-system'}>
+				<a sveltekit:prefetch href="/design-system">Design System</a>
 			</li>
 			<li class:active={$page.path === '/mythic'}><a sveltekit:prefetch href="/mythic">Mythic</a></li>
 			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
@@ -17,6 +17,10 @@
 			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 		</ul>
 	</nav>
+
+	<div class="banner">
+		Banner
+	</div>
 </header>
 
 <style>
@@ -25,15 +29,7 @@
 	nav {
 		background-color: var(--color-one);
 		display: flex;
-		min-height: 70px;
-	}
-
-	.badge {
-		background-color: var(--color-yellow);
-	}
-
-	.badge a {
-		color: var(--color-black);
+		min-height: var(--height-nav);
 	}
 
 	nav ul {
@@ -51,14 +47,14 @@
 	}
 
 	nav ul li.active {
-		background-color: var(--color-green);
+		background-color: var(--color-yellow);
 	}
 
 	nav ul li a {
 		align-items: center;
 		color: var(--color-white);
 		display: flex;
-		height: 70px;
+		height: var(--height-nav);
 		padding-left: 1em;
 		padding-right: 1em;
 		text-decoration: none;
@@ -84,17 +80,13 @@
 			color: var(--color-black);
 			display: flex;
 			font-size: 1.5em; 
-			height: 70px;
+			height: var(--height-nav);
 			justify-content: center;
 			padding: 0;
 		}
 
 		#hamburger-ingredients { display: none; }
 		nav input:checked ~ #hamburger-ingredients { display: block; }
-
-		.badge {
-			background: var(--color-green);
-		}
 
 		nav ul {
 			display: block;
@@ -106,7 +98,7 @@
 		nav ul li {
 			align-items: center;
 			display: flex;
-			height: 70px;
+			height: var(--height-nav);
 			justify-content: center;
 			width: 100%;
 		}

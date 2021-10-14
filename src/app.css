@@ -12,6 +12,9 @@
 	--color-orange: rgb(255, 127, 80);
 	--color-purple: rgb(127, 80, 255);
 	--color-yellow: rgb(255, 215, 80);
+
+	--height-nav: 50px;
+	--height-footer: 30px;
 }
 
 body {
